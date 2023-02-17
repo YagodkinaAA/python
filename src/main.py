@@ -1,5 +1,6 @@
-num1 = int(input())
-num2 = int(input())
-print(f'{num1} + {num2} = {num1 + num2}')
-print(f'{num1} - {num2} = {num1 - num2}')
-print(f'{num1} * {num2} = {num1 * num2}')
+n=int(input())
+p=[]
+for i in range(n):
+    a=int(input())**3
+    p.append(a)
+print(p)
