@@ -1,0 +1,1 @@
+print(max([(len(m)) for m in input('введите строку:\n').split()]))
