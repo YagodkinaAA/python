@@ -16,7 +16,6 @@ def quick_merge(list1, list2):
     return q
 
 
-
 n = int(input('введите кол-во списков:\n'))
 a = [int(m) for m in input('введите список из чисел:\n').split()]
 b = [int(m) for m in input('введите список из чисел:\n').split()]

@@ -5,6 +5,7 @@ def draw_triangle(fill, base):
     for i in range(p + 1, 0, -1):
         print(fill * i)
 
+
 # считываем данные
 fill = input('введите символ-заполнитель:\n')
 base = int(input('введите длину основания:\n'))

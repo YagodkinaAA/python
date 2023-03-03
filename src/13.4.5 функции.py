@@ -2,6 +2,7 @@
 def find_all(target, symbol):
     pass
 
+
 # считываем данные
 s = input()
 char = input()
