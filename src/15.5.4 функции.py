@@ -4,9 +4,9 @@ def is_password_good(password):
     flag = 0
     if len(password) >= 8:
         col += 1
-    if password.islower() == False:
+    if not password.islower():
         col += 1
-    if password.isupper() == False:
+    if not password.isupper():
         col += 1
     for i in range(len(password)):
         if password[i] in '1234567890':
