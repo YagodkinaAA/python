@@ -14,6 +14,7 @@ for d in p:
             file2.write(' ')
     if len(d)!=0:
         file2.write('\n')
+file2.close()
 
 
 
