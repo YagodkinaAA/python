@@ -12,5 +12,5 @@ with open("data.json", encoding="UTF-8") as file1:
 for f in slov:
     value[f[0]] = f[2]
 #print(value)
-with open("data1.json", 'w', encoding="UTF-8") as file1:
-    json.dump(value, file1, ensure_ascii=False, indent=2)
+with open("data1.json", 'w', encoding="UTF-8") as file2:
+    json.dump(value, file2, ensure_ascii=False, indent=2)
