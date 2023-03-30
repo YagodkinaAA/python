@@ -6,4 +6,4 @@ def make_equation(*num):
         return f'({make_equation(*first)}) * x + {last}'
 
 
-print(make_equation(3, 2, 1, 5))
+print(make_equation(3, 1, 5, 3))
