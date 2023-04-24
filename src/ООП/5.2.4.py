@@ -13,6 +13,7 @@ class Fraction:
             # print(ind)
             self.chisl = int(a[:ind])
             self.znam = int(a[ind + 1:])
+        #сокращение дроби
         k = 0
         while k != 1:
             k = gcd(self.chisl, self.znam)  # gcd-наибольший общий делитель
