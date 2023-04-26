@@ -1,7 +1,7 @@
-'''А теперь модернизируем уже новый класс PatchedPoint. Реализуйте магические методы _str__ и _repr__.
+"""А теперь модернизируем уже новый класс PatchedPoint. Реализуйте магические методы _str__ и _repr__.
 При преобразовании в строку точка представляется в формате (x, y).
-Репрезентация же должна возвращать строку для инициализации точки двумя параметрами.'''
-from math import *
+Репрезентация же должна возвращать строку для инициализации точки двумя параметрами."""
+import math
 
 
 class Point:
@@ -9,15 +9,15 @@ class Point:
     def __init__(self, a, b):
         self.x = a
         self.y = b
-        self.dlina = 0
+        self.len = 0
 
     def move(self, c, d):
         self.x = self.x + c
         self.y = self.y + d
 
     def length(self, new_point):
-        self.dlina = sqrt((new_point.x - self.x) ** 2 + (new_point.y - self.y) ** 2)
-        return round(self.dlina, 2)
+        self.len = math.sqrt((new_point.x - self.x) ** 2 + (new_point.y - self.y) ** 2)
+        return round(self.len, 2)
 
 
 class PatchedPoint(Point):
