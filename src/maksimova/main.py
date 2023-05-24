@@ -15,10 +15,9 @@ with open('signal5.csv', 'r') as datafile:
 
 def f_coefficients(n):
     my_array = np.zeros((n,))
-    k = 0
-    while k < n:
-        my_array[k] = 1.0 / n
-        k += 1
+
+    for k in range(n):
+        my_array[k] = (-12.0 * k + 6.0 * (n - 1)) / (n ** 3 - n)
     return my_array
 
 
@@ -26,14 +25,15 @@ def do_filter(data, coefficients):
     filtered_data = data.copy()
     n = len(coefficients)
     for i in range(n, len(data)):
-        # умножаем значения на коэффициенты и суммируем
-        filtered_value = sum([data[i - j] * coefficients[j] for j in range(n)])
-        # записываем отфильтрованное значение в массив
-        filtered_data[i] = filtered_value
+        filtered_data[i] = sum([data[i - j] * coefficients[j] for j in range(n)]) * 1000
     return filtered_data
 
+n = 301
+Y1 = do_filter(Y, f_coefficients(n))
 
-Y1 = do_filter(Y, f_coefficients(301))
+for i in range(n):
+    Y1[i] = 0
+
 fig, ax = plt.subplots()
 ax.set_xlabel('x')
 ax.set_ylabel('y')
