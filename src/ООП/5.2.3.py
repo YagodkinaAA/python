@@ -1,4 +1,4 @@
-from math import *
+import math
 
 
 class Point:
@@ -6,15 +6,15 @@ class Point:
     def __init__(self, a, b):
         self.x = a
         self.y = b
-        self.dlina = 0
+        self.len = 0
 
     def move(self, c, d):
         self.x = self.x + c
         self.y = self.y + d
 
-    def length(self, new_point):
-        self.dlina = sqrt((new_point.x - self.x) ** 2 + (new_point.y - self.y) ** 2)
-        return round(self.dlina, 2)
+    def length(self, n_point):
+        self.len = math.sqrt((n_point.x - self.x) ** 2 + (n_point.y - self.y) ** 2)
+        return round(self.len, 2)
 
 
 class PatchedPoint(Point):

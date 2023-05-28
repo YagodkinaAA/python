@@ -1,4 +1,4 @@
-from math import *
+import math
 
 
 class Fraction:
@@ -16,10 +16,10 @@ class Fraction:
         # сокращение дроби
         k = 0
         while k != 1:
-            k = gcd(self.chisl, self.znam)  # gcd-наибольший общий делитель
+            k = math.gcd(self.chisl, self.znam)  # gcd-наибольший общий делитель
             self.chisl //= k
             self.znam //= k
-    
+
     def numerator(self):
         return self.chisl
 
@@ -27,7 +27,7 @@ class Fraction:
         self.chisl = new_chisl
         k = 0
         while k != 1:
-            k = gcd(self.chisl, self.znam)  # gcd-наибольший общий делитель
+            k = math.gcd(self.chisl, self.znam)  # gcd-наибольший общий делитель
             self.chisl //= k
             self.znam //= k
 
@@ -38,7 +38,7 @@ class Fraction:
         self.znam = new_znam
         k = 0
         while k != 1:
-            k = gcd(self.chisl, self.znam)  # gcd-наибольший общий делитель
+            k = math.gcd(self.chisl, self.znam)  # gcd-наибольший общий делитель
             self.chisl //= k
             self.znam //= k
 
@@ -48,7 +48,7 @@ class Fraction:
         new_c.znam = self.znam * other.znam
         k = 0
         while k != 1:
-            k = gcd(new_c.chisl, new_c.znam)  # gcd-наибольший общий делитель
+            k = math.gcd(new_c.chisl, new_c.znam)  # gcd-наибольший общий делитель
             new_c.chisl //= k
             new_c.znam //= k
         return new_c
@@ -59,7 +59,7 @@ class Fraction:
         new_c.znam = self.znam * other.znam
         k = 0
         while k != 1:
-            k = gcd(new_c.chisl, new_c.znam)  # gcd-наибольший общий делитель
+            k = math.gcd(new_c.chisl, new_c.znam)  # gcd-наибольший общий делитель
             new_c.chisl //= k
             new_c.znam //= k
         return new_c
@@ -69,7 +69,7 @@ class Fraction:
         self.znam = self.znam * other.znam
         k = 0
         while k != 1:
-            k = gcd(self.chisl, self.znam)  # gcd-наибольший общий делитель
+            k = math.gcd(self.chisl, self.znam)  # gcd-наибольший общий делитель
             self.chisl //= k
             self.znam //= k
         return self
@@ -79,7 +79,7 @@ class Fraction:
         self.znam = self.znam * other.znam
         k = 0
         while k != 1:
-            k = gcd(self.chisl, self.znam)  # gcd-наибольший общий делитель
+            k = math.gcd(self.chisl, self.znam)  # gcd-наибольший общий делитель
             self.chisl //= k
             self.znam //= k
         return self

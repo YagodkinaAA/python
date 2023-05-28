@@ -1,4 +1,4 @@
-from math import *
+import math
 
 
 class Fraction:
@@ -13,10 +13,10 @@ class Fraction:
             # print(ind)
             self.chisl = int(a[:ind])
             self.znam = int(a[ind + 1:])
-        #сокращение дроби
+        # сокращение дроби
         k = 0
         while k != 1:
-            k = gcd(self.chisl, self.znam)  # gcd-наибольший общий делитель
+            k = math.gcd(self.chisl, self.znam)  # gcd-наибольший общий делитель
             self.chisl //= k
             self.znam //= k
 
@@ -27,7 +27,7 @@ class Fraction:
         self.chisl = new_chisl
         k = 0
         while k != 1:
-            k = gcd(self.chisl, self.znam)  # gcd-наибольший общий делитель
+            k = math.gcd(self.chisl, self.znam)  # gcd-наибольший общий делитель
             self.chisl //= k
             self.znam //= k
 
@@ -38,9 +38,10 @@ class Fraction:
         self.znam = new_znam
         k = 0
         while k != 1:
-            k = gcd(self.chisl, self.znam)  # gcd-наибольший общий делитель
+            k = math.gcd(self.chisl, self.znam)  # gcd-наибольший общий делитель
             self.chisl //= k
             self.znam //= k
+
     def __neg__(self):
         pass
 

@@ -1,9 +1,9 @@
-'''Создайте класс PatchedPoint — наследника уже написанного вами Point.
+"""Создайте класс PatchedPoint — наследника уже написанного вами Point.
 Требуется реализовать следующие виды инициализации нового класса:
 параметров не передано — координаты точки равны 0;
 передан один параметр — кортеж с координатами точки;
-передано два параметра — координаты точки'''
-from math import *
+передано два параметра — координаты точки"""
+import math
 
 
 class Point:
@@ -11,15 +11,15 @@ class Point:
     def __init__(self, a, b):
         self.x = a
         self.y = b
-        self.dlina = 0
+        self.len = 0
 
     def move(self, c, d):
         self.x = self.x + c
         self.y = self.y + d
 
     def length(self, new_point):
-        self.dlina = sqrt((new_point.x - self.x) ** 2 + (new_point.y - self.y) ** 2)
-        return round(self.dlina, 2)
+        self.len = math.sqrt((new_point.x - self.x) ** 2 + (new_point.y - self.y) ** 2)
+        return round(self.len, 2)
 
 
 class PatchedPoint(Point):
