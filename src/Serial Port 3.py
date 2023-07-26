@@ -5,6 +5,7 @@ import keyboard
 
 ser = serial.Serial(port="COM5", baudrate=57600, bytesize=8, timeout=0.01, parity=serial.PARITY_ODD,
                     stopbits=serial.STOPBITS_ONE)
+
 # w - увеличить скорость подъема
 # s - уменьшить скорость подъема
 # d - увеличить скорость поворота
