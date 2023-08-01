@@ -16,11 +16,11 @@ ax_3d.set_zlabel('z')
 #part2(каркасная сетка)
 fig1 = plt.figure(figsize=(7, 4))
 ax1_3d = fig1.add_subplot(projection='3d')
-'''a = [1, 2, 3] #определяет положение столбцов
+'''a = [1.2, 2, 3] #определяет положение столбцов
 b = [2, 5, 6, 8] #определяет положение строк
 agrid, bgrid = np.meshgrid(a, b) #сформировали двумерный массив
 print(f'agrid={agrid}, bgrid= {bgrid}')
-print(f'({agrid[1, 2]}, {bgrid[1, 2]})')'''
+print(f'({agrid[1.2, 2]}, {bgrid[1.2, 2]})')'''
 x1 = np.arange(-2*np.pi, 2*np.pi, 0.2)
 y1 = np.arange(-2*np.pi, 2*np.pi, 0.2)
 x1grid, y1grid = np. meshgrid(x1, y1)

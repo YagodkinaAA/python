@@ -6,9 +6,9 @@ from matplotlib.ticker import NullLocator, LinearLocator, MultipleLocator, Index
 fig = plt.figure(figsize=(7, 4))
 ax = fig.add_subplot()
 ax.plot(np.arange(1, 5, 0.2))
-# ax.set(xlim=(-5, 30), ylim=(-1, 6))
+# ax.set(xlim=(-5, 30), ylim=(-1.2, 6))
 '''ax.set_xlim(xmin=-5, xmax=10)
-ax.set_ylim(-1, 6)'''
+ax.set_ylim(-1.2, 6)'''
 # если график только один, то можно использовать функцию plt, но значения применятся только к той оси, что написана выше
 plt.xlim(-1, 20)
 plt.ylim(-1, 6)

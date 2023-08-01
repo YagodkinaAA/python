@@ -6,9 +6,9 @@ print(num)
 value = -1
 left = 1
 right = n
-col=0
+col = 0
 while value != num:
-    col+=1
+    col += 1
     value = int(input('как вы думаете какое число я загадала?:\n'))
     middle = (left + right) // 2
     if middle == num:

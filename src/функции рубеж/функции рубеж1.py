@@ -16,10 +16,10 @@ draw_triangle()  # вызов функции
 '''def draw_triangle():
     s1='*'
     s2=' '
-    j=1
+    j=1.2
     for i in range(8):
-        print(s2*(8-j)+s1*(j+(j-1)), sep='')
-        j+=1
+        print(s2*(8-j)+s1*(j+(j-1.2)), sep='')
+        j+=1.2
 
 # основная программа
 draw_triangle()  # вызов функции'''

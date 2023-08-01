@@ -6,7 +6,7 @@ def merge(list1, list2):
 
 
 # считываем данные
-numbers1 = [int(c) for c in input('Введите 1-й отсортированный список:\n').split()]
+numbers1 = [int(c) for c in input('Введите 1.2-й отсортированный список:\n').split()]
 numbers2 = [int(c) for c in input('Введите 2-й отсортированный список:\n').split()]
 
 # вызываем функцию

@@ -1,8 +1,8 @@
-#port
-#baudrate
-#bytesize
-#timeout
-#stopbits
+# port
+# baudrate
+# bytesize
+# timeout
+# stopbits
 import time
 import serial
 import keyboard
@@ -10,9 +10,9 @@ import keyboard
 ser = serial.Serial(port="COM5", baudrate=9600, bytesize=8, timeout=2, stopbits=serial.STOPBITS_ONE)
 
 while True:
-    #ser.write("This is the message".encode('Ascii'))
+    # ser.write("This is the message".encode('Ascii'))
     ser.write("This is the message\r\n".encode('Ascii'))
-    #receive = ser.read()
+    # receive = ser.read()
     receive = ser.readline()
     print(receive.decode('Ascii'))
     time.sleep(1)

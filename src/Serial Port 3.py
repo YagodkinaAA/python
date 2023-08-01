@@ -35,4 +35,5 @@ while id != 50:
     read = unpack('<ccchhhh', ser.read(11))
     print(read)
     id = id + 1
+
 ser.close()

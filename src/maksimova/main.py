@@ -39,7 +39,7 @@ ax.set_xlabel('x')
 ax.set_ylabel('y')
 ax.set_title('Графики')
 
-ax.plot(X, Y, label='График 1')
+ax.plot(X, Y, label='График 1.2')
 ax.plot(X, Y1, label='График 2', linestyle='--', color='red')
 ax.legend()
 plt.show()

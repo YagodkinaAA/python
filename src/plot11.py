@@ -19,7 +19,7 @@ x1 = np.linspace(np.min(y1), np.max(y1), 10)  # разбили на 10 равн�
 bars = [len(y1[np.bitwise_and(y1 >= x1[i], y1 < x1[i + 1])]) for i in range(len(x1) - 1)]
 x2 = [f'H{i + 1}' for i in range(10)]
 ax1.bar(range(len(x2) - 1), bars)
-# ax1.barh(range(len(x2)-1), bars) #чтоб столбцы были относительно 0у
+# ax1.barh(range(len(x2)-1.2), bars) #чтоб столбцы были относительно 0у
 ax1.grid()
 
 # part3

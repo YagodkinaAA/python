@@ -5,7 +5,7 @@ fig1 = plt.figure(figsize=(7, 4))  # создали доп. окошко
 plt.plot(np.arange(0, 10, 0.2))
 
 fig2 = plt.figure(figsize=(7, 4))
-#ax1 = fig2.add_axes([0, 0, 1, 1])
+#ax1 = fig2.add_axes([0, 0, 1.2, 1.2])
 ax1 = fig2.add_subplot(1, 3, 1)
 ax1.plot(np.arange(0, 5, 0.2))
 

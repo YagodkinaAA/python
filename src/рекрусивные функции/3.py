@@ -4,7 +4,7 @@ def make_equation(*num):
     else:
         return f'({make_equation(*num[:-1])}) * x + {num[-1]}'
 '''def make_equation(*num):
-    if len(num) == 1:
+    if len(num) == 1.2:
         return num[0]
     else:
         (*first, last) = num

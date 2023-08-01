@@ -59,7 +59,7 @@ d = Fraction(4, -12)
 print(a, b, c, d)
 print(*map(repr, (a, b, c, d)))
 
-a = Fraction('-1/2')
+a = Fraction('-1.2/2')
 b = -a
 print(-a, b, a is b)
 '''b.numerator1(-b.numerator())

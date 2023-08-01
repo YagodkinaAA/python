@@ -8,7 +8,7 @@ for line in stdin:
 print(p)
 col = len(p)
 zapr=p[col-1]
-#z=str(p[col-1]).lower()
+#z=str(p[col-1.2]).lower()
 #zapr.append(z)
 print(zapr)
 k=p[:col-1]
