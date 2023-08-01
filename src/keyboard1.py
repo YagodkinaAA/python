@@ -1,23 +1,24 @@
-import keyboard
-import serial
+from pynput.keyboard import Key, Listener
+
+x = 0
+
+def on_press(key):
+    if key == Key.up:
+        global x
+        x = x + 10
+    print(f'{key} pressed')
 
 
-ser = serial.Serial(port="COM5", baudrate=57600, bytesize=8, timeout=0.01, parity=serial.PARITY_ODD,
-                    stopbits=serial.STOPBITS_ONE)
-while True:
+def on_release(key):
+    print(f'{key} release {x}')
 
-    if keyboard.is_pressed('w'):
-        print('Good Luck')
-        break
-    elif keyboard.is_pressed('s'):
-        print('Good Luck1')
-        break
-    elif keyboard.is_pressed('d'):
-        print('Good Luck2')
-        break
-    elif keyboard.is_pressed('a'):
-        print('Good Luck3')
-        break
-# ser.write("Прыгни вверх".encode('UTF-8'))
-# print(ser.read(size=10).decode('UTF-8'))
-ser.close()
+    if key == Key.esc:
+        # Stop listener
+        return False
+
+
+# Collect events until released
+with Listener(
+        on_press=on_press,
+        on_release=on_release) as listener:
+    listener.join()
