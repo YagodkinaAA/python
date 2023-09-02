@@ -4,7 +4,7 @@ import time
 import keyboard
 import threading
 
-ser = serial.Serial(port="COM5", baudrate=57600, bytesize=8, timeout=0.01, parity=serial.PARITY_ODD,
+ser = serial.Serial(port="COM10", baudrate=57600, bytesize=8, timeout=0.01, parity=serial.PARITY_ODD,
                     stopbits=serial.STOPBITS_ONE)
 
 x = 0
@@ -38,7 +38,7 @@ thr.start()
 while id != 5000:
     ser.write(pack('<ccchhhh', b'\x5a', id.to_bytes(), b'\x08', x, y, g, c))
     time.sleep(1)
-    read = unpack('<ccchhhh', ser.read(11))
+    read = unpack('<cccih', ser.read(9))
     print(read[3], read[4])
     id = id + 1
 ser.close()
