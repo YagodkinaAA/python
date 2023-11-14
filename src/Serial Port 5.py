@@ -41,7 +41,8 @@ while i != 5000:
     ser.write(pack('<ccchhhh', b'\x5a', i.to_bytes(), b'\x08', x, y, g, c))
     time.sleep(1)
     read = unpack('<cccih', ser.read(9))
-    x = min(math.fabs((rotate_position - read[3] // 100) // 2 * 1000), 10000) * sign(x)
-    print(read[3] // 100, rotate_position)
+    x = int(rotate_position - read[3] // 1000) * 2 * 200
+    x = int(min(math.fabs(x), 10_000) * sign(x))
+    print(x, read[3], rotate_position)
     i = i + 1
 ser.close()
