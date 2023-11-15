@@ -18,19 +18,11 @@ c = 50
 def data_check():
     global rotate_position
     while True:
-        if keyboard.is_pressed("right arrow") and -20000 <= x < 20000:
+        if keyboard.is_pressed("right arrow"):
             rotate_position = rotate_position + 10
-
-        elif keyboard.is_pressed("left arrow") and -20000 < x <= 20000:
+        elif keyboard.is_pressed("left arrow"):
             rotate_position = rotate_position - 10
         time.sleep(0.2)
-
-
-def sign(num):
-    if num < 0:
-        return -1
-    else:
-        return 1
 
 
 i = 0
@@ -41,8 +33,8 @@ while i != 5000:
     ser.write(pack('<ccchhhh', b'\x5a', i.to_bytes(), b'\x08', x, y, g, c))
     time.sleep(1)
     read = unpack('<cccih', ser.read(9))
-    x = int(rotate_position - read[3] // 1000) * 2 * 200
-    x = int(min(math.fabs(x), 10_000) * sign(x))
-    print(x, read[3], rotate_position)
+    x = int(rotate_position - read[3] / 100) // 2 * 1000
+    x = int(min(math.abs(x), 10_000) * x / math.abs(x))
+    print(x, read[3] // 100, rotate_position)
     i = i + 1
 ser.close()
