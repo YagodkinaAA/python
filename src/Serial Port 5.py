@@ -34,9 +34,8 @@ while i != 5000:
     time.sleep(1)
     read = struct.unpack('<cccih', ser.read(9))
 
-    rotate_angle = -(180 * rotate_percent / 100 - 90)
-    x = (int(rotate_angle - read[3] / 100) // 2) * 1000
+    x = (int(rotate_percent - read[3] // 100)) // 10 * 500
     x = int(min(abs(x), 10_000) * numpy.sign(x))
-    print(x, read[3] // 100, rotate_angle)
+    print(f'target = {rotate_percent} %; now = {read[3] // 100} %; speed = {x}')
     i = i + 1
 ser.close()
